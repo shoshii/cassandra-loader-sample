@@ -3,7 +3,7 @@ cassandra-loader-sample
 
 *このリポジトリは、https://github.com/yukim/cassandra-bulkload-example を参考にさせていただいています*
 
-csvファイルをCassandraに一括アップロードするサンプルコードです。以下の流れで行います。
+このリポジトリは、csvファイルをSSTableに変換し、Cassandraに一括アップロードするサンプルコードです。以下の流れで行います。
 
 1. CCMを用いてクラスタ作成
 1. アップロード対象テーブル作成
