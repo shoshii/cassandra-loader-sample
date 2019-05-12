@@ -93,4 +93,14 @@ drwxr-xr-x  3 shoshii  713033059        96 May 12 19:04 ..
 $ ccm bulkload output/sample/sensor_data
 $ ccm node1 cqlsh
 SELECT * FROM sample.sensor_data WHERE sensor_id = 'sensor_1' AND date = '2019-05-13';
+
+...
+
+  sensor_1 | 2019-05-13 |    0 |      2 |     29 |  34.505692117
+  sensor_1 | 2019-05-13 |    0 |      1 |     59 | 27.3575299476
+  sensor_1 | 2019-05-13 |    0 |      1 |     29 | 17.7115568483
+  sensor_1 | 2019-05-13 |    0 |      0 |     59 | 18.7912159966
+  sensor_1 | 2019-05-13 |    0 |      0 |     29 | 11.1413248574
+
+(2880 rows)
 ```
