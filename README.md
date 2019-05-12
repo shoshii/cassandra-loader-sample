@@ -34,6 +34,8 @@ node2: UP
 
 ## 2. アップロード対象テーブル作成
 
+作成したクラスタに、IoTのセンサーデータを格納するテーブルを作成します。
+
 ```aidl
 $ ccm node1 cqlsh
 
@@ -54,6 +56,8 @@ CREATE TABLE sensor_data (
 
 ## 3. csvファイル作成
 
+python スクリプトでcsvデータを生成します。データ量は、`bin/generate_data.py`を編集することで調整できます。
+
 ```aidl
 $ python bin/generate_data.py
 # csvファイルが出力されます
@@ -66,6 +70,8 @@ drwxr-xr-x  13 shoshii  713033059       416 May 12 19:27 ..
 ```
 
 ## 4. SSTableファイル作成
+
+csvファイルを元に、JavaコードによりSSTableファイルを作成します。
 
 ```aidl
 # 実行準備
@@ -87,7 +93,7 @@ drwxr-xr-x  3 shoshii  713033059        96 May 12 19:04 ..
 
 ## 5. アップロード
 
-`sstableloader`というツールが起動し、SSTableファイルをCassandraクラスタにアップロードします。
+`ccm bulkload`というコマンドを実行すると、`sstableloader`というツールが起動し、SSTableファイルをCassandraクラスタにアップロードします。
 
 ```aidl
 $ ccm bulkload output/sample/sensor_data
