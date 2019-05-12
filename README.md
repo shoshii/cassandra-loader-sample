@@ -1,7 +1,7 @@
 cassandra-loader-sample
 ===
 
-*このリポジトリは、https://github.com/yukim/cassandra-bulkload-exampleを参考にさせていただいています*
+*このリポジトリは、https://github.com/yukim/cassandra-bulkload-example を参考にさせていただいています*
 
 csvファイルをCassandraに一括アップロードするサンプルコードです。以下の流れで行います。
 
