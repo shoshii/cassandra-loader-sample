@@ -59,6 +59,8 @@ CREATE TABLE sensor_data (
 python スクリプトでcsvデータを生成します。データ量は、`bin/generate_data.py`を編集することで調整できます。
 
 ```aidl
+$ git clone https://github.com/shoshii/cassandra-loader-sample
+$ cd cassandra-loader-sample
 $ python bin/generate_data.py
 # csvファイルが出力されます
 $ ls -la input/
