@@ -22,7 +22,7 @@ cassandra-loader-sample
 
 localhostにCassndraクラスタを起動します。バージョンは 2.0.11 を指定します。
 
-* このリポジトリのSSTable作成処理は、Cassandraバージョン2.0.11を想定しています。 2.0.11 以外のクラスタへのアップロードを実施したい場合、pom.xmlのcassandraのビルドバージョンを変更して、`BulkLoad.java`の内容を適宜変更してください。*
+*このリポジトリのSSTable作成処理は、Cassandraバージョン2.0.11を想定しています。 2.0.11 以外のクラスタへのアップロードを実施したい場合、pom.xmlのcassandraのビルドバージョンを変更して、`BulkLoad.java`の内容を適宜変更してください。*
 
 ```aidl
 $ ccm create -v 2.0.11 -n 3 sample
