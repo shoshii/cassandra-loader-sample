@@ -96,6 +96,7 @@ drwxr-xr-x  3 shoshii  713033059        96 May 12 19:04 ..
 ## 5. アップロード
 
 `ccm bulkload`というコマンドを実行すると、`sstableloader`というツールが起動し、SSTableファイルをCassandraクラスタにアップロードします。
+`sstableloader`により、短時間で効率的に大量データをCassandraに取り込むことができます。
 
 ```aidl
 $ ccm bulkload output/sample/sensor_data
