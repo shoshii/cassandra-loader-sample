@@ -66,14 +66,13 @@ public class BulkLoad {
     }
 
     public static void main(String[] args) {
-        System.out.println("creating sstable files start.");
+        System.out.println("creating sstable files has started.");
         Config.setClientMode(true);
 
         // Create output directory that has keyspace and table name in the path
         File outputDir = new File(DEFAULT_OUTPUT_DIR + File.separator + KEYSPACE + File.separator + TABLE);
         if (outputDir.exists())
         {
-            //File file = new File(outputDir);
             try {
                 recursiveDeleteFile(outputDir);
                 outputDir.mkdirs();
@@ -122,6 +121,6 @@ public class BulkLoad {
         {
             e.printStackTrace();
         }
-        System.out.println("creating sstable files end.");
+        System.out.println("creating sstable files has ended.");
     }
 }

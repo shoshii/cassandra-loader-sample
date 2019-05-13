@@ -82,7 +82,7 @@ csvファイルを元に、JavaコードによりSSTableファイルを作成し
 ```aidl
 # 実行準備
 $ mvn clean package
-# SSTableファイル作成
+# SSTableファイル作成実行
 $ mvn exec:java
 # SSTableファイルが作成されることを確認
 $ ls -la output/sample/sensor_data/
@@ -100,7 +100,7 @@ drwxr-xr-x  3 shoshii  713033059        96 May 12 19:04 ..
 ## 5. アップロード
 
 `ccm bulkload`というコマンドを実行すると、`sstableloader`というツールが起動し、SSTableファイルをCassandraクラスタにアップロードします。
-`sstableloader`により、短時間で効率的に大量データをCassandraに取り込むことができます。
+この`sstableloader`により、短時間で効率的に大量データをCassandraに取り込むことができます。
 
 ```aidl
 $ ccm bulkload output/sample/sensor_data
@@ -141,4 +141,5 @@ SELECT * FROM sample.sensor_data WHERE date = '2019-05-13' LIMIT 1000000;
   sensor_6 | 2019-05-13 |    0 |      0 |     29 | 28.4600052594
 
 (28800 rows)
+# 全センサーデータを取得できることを確認
 ```
